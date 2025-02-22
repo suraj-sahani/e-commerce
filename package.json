@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "node --import=tsx --watch --env-file=.env src/index.ts",
     "build": "tsc",
+    "db:studio": "drizzle-kit studio",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,10 +16,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "drizzle-orm": "^0.39.3",
+    "drizzle-zod": "^0.7.0",
+    "express": "^4.21.2",
+    "pg": "^8.13.3"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.11",
+    "drizzle-kit": "^0.30.4",
     "prettier": "^3.5.1",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3"
